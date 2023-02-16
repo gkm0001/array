@@ -1,0 +1,28 @@
+  #include<iostream>
+ #include<vector>
+ using namespace std;
+
+ int uniqueelement(vector<int>arr){
+      int asn = 0;
+for ( int i=0;i<arr.size();i++){
+      asn = asn ^arr[i];
+}
+return asn;
+ }
+
+int main() {
+
+      int n;
+      cin>>n;
+
+      vector<int>arr(n);
+     for ( int i=0;i<arr.size();i++){
+           cin>>arr[i];
+     }
+       int element = uniqueelement(arr);
+        cout << "the unique elment is "<< " - "<< element<<endl;
+
+
+     return 0;
+}
+
